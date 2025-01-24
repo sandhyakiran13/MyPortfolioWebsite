@@ -9,32 +9,49 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    
+}
+
+.school-image, .school-description {
+    display: flex;
+    align-items: center;  /* Vertically align content */
+    justify-content: center; /* Horizontally center content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .school-image {
-    /* Set the width of the school image div to 40% */
+    width: 40%;  /* Set a fixed width for the image container */
 }
 
 .school-description {
-    /* Set the width of the school description div to 60% */
+    width: 60%;  /* Set a fixed width for the description container */
+    padding-left: 20px;  /* Add some space between the image and the description */
 }
 
-.student-image {
-    /* Set the width of the student image div to 40% */
+.school-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto;
+    object-fit: cover; /* Ensures the image doesn't stretch and maintains aspect ratio */
+    border-radius: 10px;
 }
 
-.student-description {
-    /* Set the width of the student description div to 60% */
+.carousel-item img {
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Add corner radius to the slider images */
 }
 
-.school-description h3, .student-description h3 {
+.school-description h3 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.school-description p, .student-description p {
+.school-description p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
@@ -90,6 +107,43 @@
     font-size: 16px; /* Reduce font size for the paragraphs */
     color: #555;
     line-height: 1.6;
+}
+
+/* Remove transform: scale(1) as it can cause unexpected resizing */
+.carousel-item img {
+    transition: ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image doesn't stretch */
+    border-radius: 10px; /* Add corner radius to the slider images */
+}
+
+/* If you're trying to prevent scaling during the transition */
+.carousel-item-next img,
+.carousel-item-prev img {
+    transform: none; /* Ensure no scale is applied to images during transition */
+}
+
+/* Custom CSS for overlay as a banner at the bottom */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    right: 0;
+    text-align: left; /* Align text to the left */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.carousel-item:hover .carousel-caption {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: #fff; /* White text color */
+    margin: 0; /* Remove default margin */
 }
 
 
