@@ -9,10 +9,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; /* Ensure the content is stacked vertically */
-    align-items: center;
-    justify-content: center; /* Center the content horizontally */
+    
 }
 
 .school-image {
@@ -35,14 +32,12 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    align-self: center; /* Center the title horizontally */
 }
 
 .school-description p, .student-description p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
-    align-self: center; /* Center the paragraph horizontally */
 }
 
 .school-image img, .student-image img {
@@ -57,19 +52,42 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    flex: 1; /* Ensure the containers are side by side */
     margin-top: 20px; /* Add margin-top to create space */
 }
 
+.challenge {
+    background-color: #F5EFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px; /* Add margin-top to create space */
+    width: 48%; /* Ensure two containers are displayed next to each other */
+    margin-right: 2%; /* Add margin-right to create space between containers */
+}
+
+.challenge:nth-child(2n) {
+    margin-right: 0; /* Remove margin-right for every second container */
+}
+
+.challenge:nth-child(3) {
+    clear: both; /* Ensure the third container starts a new row */
+    margin-right: 2%; /* Add margin-right to create space between containers */
+}
+
+.challenge:nth-child(4) {
+    margin-right: 0; /* Remove margin-right for the fourth container */
+}
+
 .challenge h3, .solution h3, .data h3, .exposure h3, .high-lows h3 {
-    font-size: 24px;
+    font-size: 20px; /* Reduce font size for the title */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center the title in the container */
 }
 
 .challenge p, .solution p, .data p, .exposure p, .high-lows p {
-    font-size: 16px;
+    font-size: 16px; /* Reduce font size for the paragraphs */
     color: #555;
     line-height: 1.6;
 }
