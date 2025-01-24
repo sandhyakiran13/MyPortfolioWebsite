@@ -2,3 +2,76 @@
     background-color: #F5EFFF;
     /* Add specific styles for Exposure Trips section */
 }
+
+.school-image, .school-description, .student-image, .student-description {
+    background-color: #F5EFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.school-image {
+    /* Set the width of the school image div to 40% */
+}
+
+.school-description {
+    /* Set the width of the school description div to 60% */
+}
+
+.student-image {
+    /* Set the width of the student image div to 40% */
+}
+
+.student-description {
+    /* Set the width of the student description div to 60% */
+}
+
+.school-description h3, .student-description h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: center; /* Center the title horizontally */
+}
+
+.school-description p, .student-description p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    align-self: center; /* Center the paragraph horizontally */
+}
+
+.school-image img, .student-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.challenge, .solution, .data, .exposure, .high-lows {
+    background-color: #F5EFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex: 1; /* Ensure the containers are side by side */
+    margin-top: 20px; /* Add margin-top to create space */
+}
+
+.challenge h3, .solution h3, .data h3, .exposure h3, .high-lows h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Center the title in the container */
+}
+
+.challenge p, .solution p, .data p, .exposure p, .high-lows p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
