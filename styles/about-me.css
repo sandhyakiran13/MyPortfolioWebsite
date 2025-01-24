@@ -1,0 +1,81 @@
+.left-div, .right-div {
+    background-color: #F5EFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.left-div {
+    /* Set the width of the left div to 40% */
+}
+
+.right-div {
+ /* Set the width of the right div to 60% */  
+}
+
+.left-div h3, .right-div h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: center; /* Center the title horizontally */
+}
+
+.left-div p, .right-div p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    align-self: center; /* Center the paragraph horizontally */
+}
+
+.left-div img, .right-div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-div, .paragraph-div {
+    background-color: #F5EFFF;
+    padding: 10px; /* Reduce padding to 10px */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.image-div {
+     /* Set the width of the image div to 40% */
+    aspect-ratio: 1;
+}
+
+.paragraph-div {
+     /* Set the width of the paragraph div to 60% */
+}
+
+.paragraph-div h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0; /* Add margin of 10px on top and bottom */
+    align-self: center; /* Center the title horizontally */
+}
+
+.paragraph-div p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px; /* Add margin of 10px on all sides */
+    align-self: center; /* Center the paragraph horizontally */
+}
+
+.image-div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

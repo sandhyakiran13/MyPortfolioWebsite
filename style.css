@@ -1,546 +1,162 @@
-/* Reset */
-body, html {
-    background-color: #CDC1FF;
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: "Arial", sans-serif;
 }
 
-/* Header Styling */
-header {
-    background-color: rgb(30, 30, 31);
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    color: white;
-    box-sizing: border-box;
+body {
+    background-color: #F5EFFF;
+    /* ...existing code... */
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-container h1 {
-    font-family: "Arial", sans-serif;
-    font-size: 1.5rem;
-}
-
-.header-image {
-    width: 50px;
-    height: 50px;
+.navbar-brand img {
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
-header h1 {
-    font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: white;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* Navigation Links */
-nav {
-    margin-left: auto;
-}
-
-.navbar-nav {
-    margin-left: auto;
-    opacity: 1;
-}
-
-.navbar-nav .nav-link.active {
-    background-color: transparent;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-/* Video Banner */
-#video-banner {
+/* Video container and overlay styles */
+.video-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 80vh;
     overflow: hidden;
 }
-
-#video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
+.video-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
 }
 
-/* Main Section Styling */
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+/* Overlay styles */
+.video-overlay {
+    position: absolute; /* Position the overlay absolutely within the video container */
+    top: 70%; /* Center the overlay vertically */
+    left: 2%; /* Align the overlay to the left */
+    transform: translateY(-50%); /* Adjust the overlay position to be exactly centered vertically */
+    color: rgb(255, 255, 255); /* Set the text color to white */
+    text-align: center; /* Center-align the text */
+    background-color: rgba(0, 0, 0, 0); /* Set a semi-transparent background color */
+    padding: 20px; /* Add padding around the text */
+    border-radius: 10px; /* Round the corners of the overlay */
+    width: 30%;
 }
 
-main h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
+.video-overlay .carousel-inner {
+    height: 100%; /* Make the carousel inner container take the full height of the overlay */
+    width: 100%; /* Set the width of the carousel inner container */
 }
 
-/* About Section */
-#about {
-    margin-top: 40px;
+.video-overlay .carousel-item {
+    height: 100%; /* Make the carousel items take the full height of the carousel inner container */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center-align the text */
 }
 
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #cbe698e5;
-    padding: 20px;
-    border-radius: 1rem;
+.video-overlay .carousel-item h1,
+.video-overlay .carousel-item p {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding around the text */
 }
 
-.about-details {
-    display: flex;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.video-overlay h1 {
+    font-size: 36px; /* Set the font size for the heading */
+    margin-bottom: 10px; /* Add margin below the heading */
 }
 
-.about-container-1 .about-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.video-overlay p {
+    font-size: 18px; /* Set the font size for the paragraph */
 }
 
-.about-container-1 .about-text h3 {
-    font-size: 1.5rem;
-    color: #333;
+@media (max-width: 768px) {
+    .video-overlay {
+        bottom: 10px; /* Adjust the position for smaller screens */
+        left: 10px; /* Adjust the position for smaller screens */
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+    .video-overlay h1 {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+    .video-overlay p {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+    }
 }
 
-.about-container-1 .about-text p {
-    font-size: 1rem;
-    color: #666;
+/* Carousel control styles */
+.carousel-indicators li {
+    background-color: #000; /* Set the background color for the carousel indicators */
 }
 
-.about-image {
-    border-radius: 8px;
-    width: 300px; /* Set a fixed width */
-    max-width: 25%; /* Ensure it is responsive */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Set the width for the carousel controls */
 }
 
-/* Academic Section */
-#academic {
-    margin-top: 40px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Invert the colors of the carousel control icons */
+    background-color: rgba(0, 0, 0, 0.5); /* Set a semi-transparent background color */
+    border-radius: 50%; /* Round the corners of the carousel control icons */
+    padding: 10px; /* Add padding around the carousel control icons */
 }
 
-.academic-container {
-    background-color: #fbfd93;
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background color on hover */
 }
 
-.academic-container .image-container img {
-    height: 300px; /* Set the height to match the slider */
-    object-fit: cover; /* Ensure the image covers the entire container */
-    border-radius: 8px; /* Apply border-radius */
+/* Smooth fade transition for carousel */
+.carousel-fade .carousel-item {
+    transition: opacity 1.5s ease-in-out; /* Adjust the duration and easing for a smoother transition */
+    opacity: 0;
 }
 
-.academic-image {
-    border-radius: 8px;
+.carousel-fade .carousel-item.active {
+    opacity: 1;
 }
 
-/* Culture Section */
-#culture {
-    margin-top: 40px;
+/* Exposure section styles */
+.exposure-section {
+    padding: 50px 0; /* Add padding above and below the exposure section */
+    background-color: #f8f9fa; /* Set the background color for the exposure section */
 }
 
-.culture-container {
-    background-color: #E5D9F2; /* Light */
-}
-
-/* Leading Self India Section */
-#leading-self-india {
-    margin-top: 40px;
-}
-
-.leading-container {
-    background-color: #A294F9; /* Dark */
-}
-
-/* Exposure Slider */
-.exposure-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    height: 100%;
-}
-
-.exposure-slider img {
-    width: 100%;
-    display: block;
-}
-
-.exposure-slider .carousel-control-prev,
-.exposure-slider .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    height: auto;
-    background: none;
-    color: white;
-}
-
-/* Exposure Section */
-.exposure-section .container {
-    padding-top: 10px; /* Add vertical padding between the containers */
-    padding-bottom: 10px; /* Add vertical padding between the containers */
-}
-
-.exposure-section .row {
-    padding-top: 10px; /* Add top padding to each row */
-    padding-bottom: 10px; /* Add bottom padding to each row */
+.exposure-section h2 {
+    text-align: center; /* Center-align the heading */
+    font-size: 36px; /* Set the font size for the heading */
+    margin-bottom: 30px; /* Add margin below the heading */
+    font-weight: bold; /* Make the heading bold */
 }
 
 .exposure-section .card {
-    border: 2px solid #A294F9; /* Add border to the containers */
-    border-radius: 8px; /* Ensure the border has rounded corners */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #E5D9F2; /* Light */
-}
-
-.exposure-section .card:nth-child(even) {
-    flex-direction: row-reverse;
+    margin-bottom: 30px; /* Add margin below the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow to the cards */
+    border: none; /* Remove the border from the cards */
+    border-radius: 10px; /* Round the corners of the cards */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .exposure-section .card img {
-    width: 50%;
-    border-radius: 8px;
-    margin-right: 10px;
-}
-
-.exposure-section .card:nth-child(even) img {
-    margin-right: 0;
-    margin-left: 10px;
+    width: 100%; /* Make the images take the full width of the cards */
+    height: auto; /* Maintain the aspect ratio of the images */
+    object-fit: cover; /* Cover the entire area of the image container */
 }
 
 .exposure-section .card-body {
-    width: 50%;
+    padding: 20px; /* Add padding inside the card body */
 }
 
-/* Goal Setting Section */
-.goal-setting-container {
-    display: flex;
-    justify-content: center; /* Center the elements horizontally */
-    gap: 20px;
-    flex-wrap: wrap; /* Ensure images wrap to the next line if necessary */
-    margin-top: 20px;
-    text-align: left; /* Align the text to the left */
+.exposure-section .card-title {
+    font-size: 24px; /* Set the font size for the card titles */
+    font-weight: bold; /* Make the card titles bold */
+    margin-bottom: 10px; /* Add margin below the card titles */
 }
 
-.goal-setting-content {
-    flex: 1;
-    max-width: 30%; /* Reduce the horizontal space taken by the title and paragraph */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: flex-start; /* Align the content to the left */
-    text-align: center; /* Center the text */
-}
-
-.goal-setting-image {
-    position: relative;
-    flex: 1;
-    max-width: 48%; /* Ensure both images are of the same scale */
-    height: 300px; /* Set a fixed height for both images */
-    display: flex;
-    align-items: center; /* Center the content vertically */
-}
-
-.goal-setting-image img {
-    width: 100%;
-    height: 100%; /* Ensure the image covers the entire container */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 8px;
-}
-
-.goal-setting-image.portrait {
-    max-width: 16%; /* Make the first image smaller */
-    height: 300px; /* Ensure the portrait image matches the height of the slider */
-    display: flex;
-    align-items: center; /* Center the content vertically */
-}
-
-.goal-setting-image.portrait img {
-    object-fit: contain; /* Adjust portrait image to fit within the container */
-}
-
-.goal-setting-image.slider {
-    flex: 1; /* Ensure the slider fits within the section */
-    height: 300px; /* Ensure the slider matches the height of the first image */
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    overflow: hidden; /* Ensure the slider does not exceed the container size */
-}
-
-.goal-setting-image .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%; /* Set the height of the overlay bar */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    margin-bottom: 0; /* Ensure the overlay is correctly positioned */
-    bottom: 0; /* Ensure the overlay is correctly positioned */
-}
-
-.goal-setting-image:hover .overlay {
-    opacity: 1;
-}
-
-/* Overlay for Image and Slider */
-.image-container {
-    position: relative;
-}
-
-.image-container .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%; /* Set the height of the overlay bar */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.image-container:hover .overlay {
-    opacity: 1;
-}
-
-.carousel-item .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%; /* Set the height of the overlay bar */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.carousel-item:hover .overlay {
-    opacity: 1;
-}
-
-/* Add shadow to all containers */
-.about-container,
-.academic-container,
-.culture-container,
-.leading-container,
-.new-container,
-.art-sessions-container .new-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        padding: 10px;
-        justify-content: space-between;
-    }
-
-    .header-container {
-        gap: 10px;
-    }
-
-    .header-image {
-        width: 40px;
-        height: 40px;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-        white-space: normal;
-        text-align: left;
-    }
-
-    .about-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #about {
-        padding: 20px;
-        margin: 20px 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-image {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    .about-container p {
-        margin-top: 20px;
-    }
-
-    #video-banner {
-        height: 60vh;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
-
-/* New Content Below Button */
-.new-container {
-    margin-top: 20px;
-    text-align: center;
-    background-color: #E5D9F2; /* Light */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.new-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.new-container p {
-    font-size: 1rem;
-    color: #333;
-}
-
-.new-container.in-for-treat {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 0.8rem;
-    background-color: #E5D9F2; /* Light */
-}
-
-.new-container.in-for-treat .new-container {
-    flex: 1;
-    max-width: 90%;
-    background-color: #E5D9F2; /* Light */
-    padding: 10px;
-}
-
-.new-container.in-for-treat img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.new-container.bonding-over-lunch {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #E5D9F2; /* Light */
-    padding: 20px;
-    border-radius: 8px;
-    color: rgb(10, 10, 10);
-    justify-content: space-between;
-}
-
-.new-container.bonding-over-lunch img {
-    flex: 1;
-    max-width: 50%;
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.new-container.bonding-over-lunch .content {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.new-container.bonding-over-lunch h4 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.new-container.bonding-over-lunch p {
-    font-size: 1rem;
-}
-
-.art-sessions-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensure images wrap to the next line if necessary */
-}
-
-.art-sessions-container .new-container {
-    flex: 1;
-    max-width: 24%; /* Ensure all images are of the same scale */
-    background-color: #E5D9F2; /* Light */
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.art-sessions-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
+.exposure-section .card-text {
+    font-size: 16px; /* Set the font size for the card text */
+    color: #555; /* Set the text color */
+    line-height: 1.6; /* Set the line height */
 }
