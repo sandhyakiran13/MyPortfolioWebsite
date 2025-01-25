@@ -146,4 +146,21 @@
     margin: 0; /* Remove default margin */
 }
 
+.carousel-caption h5 {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+    
+.graph-container {
+  max-width: 500px; /* Increase the maximum width for the graph container */
+  margin: 0 10px; /* Add some margin to separate the graphs */
+  padding: 20px; /* Add some padding */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  height: 500px; /* Adjust the height of the graph container */
+}
+
 
