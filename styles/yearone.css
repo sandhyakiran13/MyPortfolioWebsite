@@ -37,14 +37,6 @@
     border-radius: 10px;
 }
 
-.carousel-item img {
-    transition: transform 0.6s ease-in-out;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px; /* Add corner radius to the slider images */
-}
-
 .school-description h3 {
     font-size: 24px;
     font-weight: bold;
@@ -67,7 +59,7 @@
     background-color: #F5EFFF;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
     margin-bottom: 20px;
     margin-top: 20px; /* Add margin-top to create space */
 }
@@ -109,46 +101,19 @@
     line-height: 1.6;
 }
 
-/* Remove transform: scale(1) as it can cause unexpected resizing */
-.carousel-item img {
-    transition: ease-in-out;
-    width: 100%;
+/* Ensure the exposure section does not cause overflow */
+.exposure {
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure images within the exposure section are properly contained */
+.exposure img {
+    max-width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure the image doesn't stretch */
-    border-radius: 10px; /* Add corner radius to the slider images */
 }
 
-/* If you're trying to prevent scaling during the transition */
-.carousel-item-next img,
-.carousel-item-prev img {
-    transform: none; /* Ensure no scale is applied to images during transition */
-}
-
-/* Custom CSS for overlay as a banner at the bottom */
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
-    bottom: 0; /* Position at the bottom */
-    left: 0;
-    right: 0;
-    text-align: left; /* Align text to the left */
-    opacity: 1; /* Always visible */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
-}
-
-.carousel-caption h5, .carousel-caption p {
-    color: #fff; /* White text color */
-    margin: 0; /* Remove default margin */
-}
-
-.carousel-caption h5 {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-}
-    
 .graph-container {
   max-width: 500px; /* Increase the maximum width for the graph container */
   margin: 0 10px; /* Add some margin to separate the graphs */
@@ -221,11 +186,29 @@
     border-radius: 10px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Add background color to the navigation icons */
-    border-radius: 50%; /* Make the icons circular */
-    padding: 10px; /* Add padding to the icons */
+/* Prevent horizontal scrolling */
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all sections and containers are properly contained */
+.container, .row, .col-md-4, .col-md-6, .col-md-12 {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure images and videos do not cause overflow */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure the container is centered */
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 
