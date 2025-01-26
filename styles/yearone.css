@@ -163,4 +163,30 @@
   height: 500px; /* Adjust the height of the graph container */
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.219);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-title, .card-text {
+  margin: 0;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
 
