@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+
+:root{
+    --lavender-lighest: #F5EFFF;
+    --lavender-light: #E5D9F2;
+    --lavender-medium: #CDC1FF;
+    --lavender-dark: #A294F9;
+}
+
 body {
     background-color: #F5EFFF;
     /* ...existing code... */
@@ -13,6 +21,10 @@ body {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+}
+
+.custom-nav{
+    background-color: var(--lavender-dark);
 }
 
 /* Video container and overlay styles */
