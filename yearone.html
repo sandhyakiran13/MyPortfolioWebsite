@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/yearone.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -28,7 +31,7 @@
                 <a class="nav-link" href="yearone.html">Year 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="culture.html">Culture</a>
+                <a class="nav-link" href="yeartwo.html">Year 2</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="academics.html">Academics</a>
@@ -43,35 +46,27 @@
                     <div class="col-md-12">
                         <h1 class="text-center">Year One of Fellowship</h1>
                         <div class="row pt-4">
-                            <div class="col-md-3">
-                                <div id="schoolImageCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="media/year_1/imgs/shivshakti_vidyalaya.jpg" alt="Shivshakti Vidyalaya" class="d-block w-100">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>Shivshakti Vidyalaya</h5>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="media/year_1/imgs/yr_1_classroom.jpg" alt="Another Image" class="d-block w-100">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>Year 1 Students</h5>
-                                            </div>
-                                        </div>
+                            <div class="col-md-4">
+                                <div class="position-relative">
+                                    <img src="media/year_1/imgs/shivshakti_vidyalaya.jpg" alt="Shivshakti Vidyalaya" class="img-fluid rounded">
+                                    <div class="carousel-caption d-md-block">
+                                        <h5>Shivshakti Vidyalaya</h5>
                                     </div>
-                                    <a class="carousel-control-prev" href="#schoolImageCarousel" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#schoolImageCarousel" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
                                 </div>
                             </div>
-                            <div class="col-md-9">
-                                <h3>Year One School</h3>
-                                <p>Write about shiv shakti vidyalaya, what kind of school, Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis asperiores quaerat dolore. Hic doloremque libero sequi consequatur nemo beatae voluptas neque aut dignissimos quisquam quia similique velit, blanditiis laboriosam!</p>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div>
+                                    <h3 class="text-center">Year One School</h3>
+                                    <p class="text-center">Write about shiv shakti vidyalaya, what kind of school, Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis asperiores quaerat dolore. Hic doloremque libero sequi consequatur nemo beatae voluptas neque aut dignissimos quisquam quia similique velit, blanditiis laboriosam!</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="position-relative">
+                                    <img src="media/year_1/imgs/yr_1_classroom.jpg" alt="Year 1 Students" class="img-fluid rounded">
+                                    <div class="carousel-caption d-md-block">
+                                        <h5>Year 1 Students and their 3rd Standard Fellow Shruti</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,16 +111,52 @@
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex flex-column align-items-center">
-                      <img src="media/year_1/imgs/library_session001.jpg" alt="Library" class="img-fluid rounded mb-2">
-                
+                        <img src="media/year_1/imgs/library_session001.jpg" alt="Library" class="img-fluid rounded mb-2">
                     </div>
                     <h3 class="text-center mt-2">Functional School Library</h3>
                     <p>To foster a love for reading, we procured storybooks and bookshelves through donations. With the help of students, we set up a functional school library. After this, we introduced regular DEAR (Drop Everything and Read) blocks to encourage reading habits.</p>
-                  </div>
                 </div>
-                <div class="row mt-4">
                   <div class="col-md-4">
-                    <img src="media/year_1/imgs/mind_map.jpg" alt="Mind Map" class="img-fluid rounded mb-2">
+                    <div id="socialStudiesCarousel" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <a href="media/year_1/imgs/mind_map.jpg" target="_blank">
+                                  <div class="image-container-1-1">
+                                      <img src="media/year_1/imgs/mind_map.jpg" alt="Mind Map" class="d-block w-100 img-fluid rounded mb-2">
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="carousel-item">
+                              <a href="media/year_1/imgs/story_map001.jpg" target="_blank">
+                                  <div class="image-container-1-1">
+                                      <img src="media/year_1/imgs/story_map001.jpg" alt="Story Map 1" class="d-block w-100 img-fluid rounded mb-2">
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="carousel-item">
+                              <a href="media/year_1/imgs/story_map002.jpg" target="_blank">
+                                  <div class="image-container-1-1">
+                                      <img src="media/year_1/imgs/story_map002.jpg" alt="Story Map 2" class="d-block w-100 img-fluid rounded mb-2">
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="carousel-item">
+                              <a href="media/year_1/imgs/Story_map003.jpg" target="_blank">
+                                  <div class="image-container-1-1">
+                                      <img src="media/year_1/imgs/Story_map003.jpg" alt="Story Map 3" class="d-block w-100 img-fluid rounded mb-2">
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#socialStudiesCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#socialStudiesCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
                     <h3 class="text-center mt-2">Engaging Social Studies</h3>
                     <p>Throughout the year, I experimented with various methods to make Social Studies (SST) more engaging, as many students disliked the subject. One effective approach was teaching through story maps and graphic organizers. I also introduced mind maps, where students used basic WH questions (Who, What, Where, When, Why, How) to simplify lengthy texts into smaller concepts. The mind maps and graphic organizers helped students understand and articulate answers better so that they could recall them in exams.</p>
                   </div>
@@ -135,10 +166,11 @@
                     <p>To promote collaboration, I created heterogeneous groups with students from different rigor levels. Each student was held accountable for their group's performance. During lessons, I ensured that they engaged in at least one group activity, project, or teamwork task. This helped students interact and bond with each other regardless of gender.</p>
                   </div>
                   <div class="col-md-4">
-                    <img src="media/year_1/imgs/Goal_setting_grade_eight.jpg  " alt="Goal Setting" class="img-fluid rounded">
+                    <img src="media/year_1/imgs/Goal_setting_grade_eight.jpg" alt="Goal Setting" class="img-fluid rounded">
                     <h3 class="text-center mt-2">Goal Setting</h3>
                     <p>At the beginning of the semester, we conducted a group goal-setting activity where students reflected on their academic aspirations. They wrote down the goals they hoped to achieve and discussed the specific actions they could take to reach those goals. This exercise helped them develop a clearer sense of purpose and accountability for their academic growth.</p>
                   </div>
+                </div>
                   <div class="col-md-12">
                     <h3 class="text-center mt-2">Debate Sessions</h3>
                     <p>Debate sessions were organized in class, where students were divided into groups of three and given various topics to discuss. One of the topics, Should school uniforms be compulsory? sparked an engaging discussion. The activity encouraged students to express their opinions openly and confidently.</p>
@@ -184,28 +216,29 @@
                     <p>Here are some of the students making amazing arguments on the topic.</p>
                     <div class="row">
                       <div class="col-md-4">
-                        <a href="video_link_1.html">
-                          <img src="media/year_1/imgs/debate_thumbnail_1.jpg" alt="Debate Thumbnail 1" class="img-fluid rounded">
+                        <a href="video_link_1.html" target="_blank">
+                          <img src="media/year_1/imgs/debate_thumbnail_Jyoti_Chauhan.jpg" alt="Debate Thumbnail 1" class="img-fluid rounded">
                         </a>
-                        <h6 class="text-center mt-2">"The Struggle for Comfort: Why Girls' School Uniforms Should Be Reconsidered".</h6>
+                        <h6 class="text-center mt-2">The Struggle for Comfort: Why Girls' School Uniforms Should Be Reconsidered.</h6>
                           <h6 class="text-center mt-2"> -Jyoti Chauhan</h6>
-                        <p>Jyoti Chauhan opposed making school uniforms compulsory. She pointed out that students face corporal punishment for not wearing uniforms, causing stress. The high cost means families can only afford two pairs, leading to hygiene issues. Her strongest argument was the discomfort girls face with frock-style uniforms, especially during menstruation, which makes simple tasks like sitting or climbing stairs difficult and uncomfortable. <a href="video_link_1.html">Watch the video</a></p>
+                        <p>Jyoti Chauhan opposed making school uniforms compulsory. She pointed out that students face corporal punishment for not wearing uniforms, causing stress. The high cost means families can only afford two pairs, leading to hygiene issues. Her strongest argument was the discomfort girls face with frock-style uniforms, especially during menstruation, which makes simple tasks like sitting or climbing stairs difficult and uncomfortable. <a href="video_link_1.html" target="_blank">Watch the video</a></p>
                       </div>
                       <div class="col-md-4">
-                        <a href="video_link_2.html">
-                          <img src="media/year_1/imgs/debate_thumbnail_2.jpg" alt="Debate Thumbnail 2" class="img-fluid rounded">
+                        <a href="video_link_2.html" target="_blank">
+                          <img src="media/year_1/imgs/Tufail_thumbnail_gif.gif" alt="Debate Thumbnail 2" class="img-fluid rounded">
                         </a>
-                        <h6 class="text-center mt-2">Debate Topic 2</h6>
+                        <h6 class="text-center mt-2">Raising Concerns with Humor: Tufail's Take on School Uniforms and Infrastructure</h6>
                         <h6 class="text-center mt-2"> - Tufail</h6>
-                        <p>During the debate, some students also shared challenges they faced in school, such as high fees, corporal punishment for late fee payments, and lack of proper infrastructure. The activity encouraged students to express their opinions openly and confidently. <a href="video_link_2.html">Watch the video</a></p>
+                        <p>Tufail, one of my students, recently shared his thoughts on the topic of school uniforms not being compulsory. He mentioned that he feels the cost charged by the school is quite high, but his main concern was the response he received—that the money goes towards the school’s welfare. In his usual humorous way, Tufail pointed out that, despite the funds, there hasn’t been much improvement in the school infrastructure, which he feels is a real issue for the students. His witty comments had everyone laughing. <a href="video_link_2.html" target="_blank">Watch the video</a></p>
                       </div>
                       <div class="col-md-4">
-                        <a href="video_link_3.html">
-                          <img src="media/year_1/imgs/debate_thumbnail_3.jpg" alt="Debate Thumbnail 3" class="img-fluid rounded">
+                        <a href="video_link_3.html" target="_blank">
+                          <img src="media/year_1/imgs/debate_thumbnail_Deepak.jpg" alt="Debate Thumbnail 3" class="img-fluid rounded">
                         </a>
-                        <h6 class="text-center mt-2">Debate Topic 3</h6>
+                        <h6 class="text-center mt-2">Deepak’s Insight: The Case for School Uniforms and Unity</h6>
                         <h6 class="text-center mt-2"> -Deepak</h6>
-                        <p>Another topic discussed was the impact of technology on education. Students debated the pros and cons of using digital devices in the classroom, sharing their experiences and perspectives. The activity helped them develop critical thinking and public speaking skills. <a href="video_link_3.html">Watch the video</a></p>
+                        <p>
+                          Another student, Deepak, who is usually more reserved, showed great confidence and courage when he spoke in front of the class. He shared his reasons for believing that school uniforms should be compulsory. One of his strongest points was that the word "uniform" represents unity, as it makes everyone look the same. He explained that since students come from different financial backgrounds, wearing home clothes could create disparities, with some students appearing more stylish than others, which might make some feel inferior.<a href="video_link_3.html" target="_blank">Watch the video</a></p>
                       </div>
                     </div>
                   </div>
@@ -230,6 +263,79 @@
             <div class="row mb-4">
               <div class="col-md-12">
                 <h2 class="text-center">Exposure</h2>
+                <div class="row mt-4">
+                  <div class="col-md-4">
+                    <img src="media\year_1\imgs\Bloombergoffice.jpeg" alt="Bloomberg Session" class="img-fluid rounded">
+                    <h3 class="text-center mt-2">Digital Literacy with Bloomberg</h3>
+                    <p>To address the digital divide and lack of computer literacy among students, a collaboration with Bloomberg was established. Volunteers conducted sessions to teach students how to use computers and laptops effectively. Over 4-5 sessions at Bloomberg’s office, students learned skills such as using Microsoft Excel and Google Docs, which boosted their confidence in handling technology and improved their performance in computer exams.</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div id="nehruScienceCarousel" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="media/year_1/imgs/sneha_nehrusc.jpeg" alt="Nehru Science Centre" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="media/year_1/imgs/Nehrusciencecentre.jpg" alt="Nehru Science Centre" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#nehruScienceCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#nehruScienceCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                    <h3 class="text-center mt-2">Visit to Nehru Science Centre</h3>
+                    <p>Students were also taken to the Nehru Science Centre, where they explored scientific projects, tools, and physics experiments. This visit ignited their curiosity and made Science and Math more engaging by connecting concepts to real-life applications.</p>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="media/year_1/imgs/Essay_on_SndoMusic.jpg" target="_blank">
+                      <div class="image-container">
+                          <img src="media/year_1/imgs/Essay_on_SndoMusic.jpg" alt="Nita Ambani Cultural Centre" class="img-fluid rounded">
+                      </div>
+                    </a>
+                    <h3 class="text-center mt-2">Live Musical Performance</h3>
+                    <p>For the first time, the students attended a live musical performance at the Nita Ambani Cultural Centre, where they watched The Sound of Music. It was an unforgettable experience, and the students thoroughly enjoyed it. Following the event, they were encouraged to write about their experiences, helping them reflect on and express their excitement and learning from the performance.</p>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-md-6">
+                    <div id="mentalHealthCarousel" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="media/year_1/imgs/human_knot.jpeg" alt="Atma Prakash" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="media/year_1/imgs/collectivecarnival.jpeg" alt="Atma Prakash" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="media/year_1/imgs/collectivecarnival_2.jpeg" alt="Atma Prakash" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="media/year_1/imgs/collectivecarnival_3.jpeg" alt="Atma Prakash" class="d-block w-100 img-fluid rounded mb-2">
+                          </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#mentalHealthCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#mentalHealthCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                    <h3 class="text-center mt-2">Mental Health Support</h3>
+                    <p>For students requiring psychological support, a partnership with Atma Prakash facilitated a mental health session, and a counselor was arranged to provide individual counseling sessions weekly over six months. This intervention led to noticeable behavioral improvements. Additionally, a project was designed to address challenges like low self-esteem, exclusion, peer pressure, and lack of confidence. Weekly activities like entangling human knot, obstacle challenge, making the tallest tower with newspapers, etc were conducted, followed by reflection and learning discussions, creating a positive impact on the students’ emotional and mental well-being.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="media/exposure/counselor_session.jpg" alt="Counselor Session" class="img-fluid rounded">
+                    <h3 class="text-center mt-2">Counselor Support</h3>
+                    <p>At the beginning of the year, one of my students, Rizwan, was feeling quite uneasy, which made it difficult for him to come to school. However, after receiving consistent support through counseling, he showed significant progress. Over time, he became more confident, started attending school regularly, and seemed much more secure. Another student, Deepak, gradually became more engaged in class and began initiating conversations with me. It’s been truly rewarding to see both of them grow and become more active and connected in the school environment.</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row mb-4">
@@ -251,144 +357,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <script>
-      var ctx = document.getElementById('rcLevelChart').getContext('2d');
-      var rcLevelChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['BOY', 'MOY', 'EOY'], // Updated labels
-          datasets: [
-            {
-              label: 'Average RC Level',
-              data: [3.1, 2.8, 3.9], // Updated data for average RC level
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              borderColor: 'rgba(75, 192, 192, 1)',
-              borderWidth: 1,
-              barPercentage: 1, // Reduce bar width
-              categoryPercentage: 0.5 // Adjust category width to keep spacing
-            },
-            {
-              label: 'Target RC Level',
-              data: [4.5, 5, 5.5], // Updated data for target RC level
-              backgroundColor: 'rgba(255, 99, 132, 0.2)',
-              borderColor: 'rgba(255, 99, 132, 1)',
-              borderWidth: 1,
-              barPercentage: 1, // Reduce bar width
-              categoryPercentage: 0.5 // Adjust category width to keep spacing
-            }
-          ]
-        },
-        options: {
-          plugins: {
-            datalabels: {
-              anchor: 'center', // Center the labels
-              align: 'center', // Center the labels
-              formatter: function(value) {
-                return value > 0 ? value.toFixed(1) : ''; // Only show values greater than 0
-              }
-            },
-            legend: {
-              position: 'bottom' // Move labels to the bottom
-            }
-          },
-          scales: {
-            y: {
-              title: {
-                display: true,
-                text: '% of Students' // Updated y-axis title
-              },
-              min: 0,
-              max: 6,
-              ticks: {
-                stepSize: 0.5
-              }
-            },
-            x: {
-              title: {
-                display: true,
-                text: 'Exams'
-              },
-              grid: {
-                display: false // Remove origin value
-              }
-            }
-          }
-        },
-        plugins: [ChartDataLabels]
-      });
-
-      var ctx2 = document.getElementById('studentGrowthChart').getContext('2d');
-      var studentGrowthChart = new Chart(ctx2, {
-        type: 'bar',
-        data: {
-          labels: ['Student Growth'], // Single label for combined bar
-          datasets: [
-            {
-              label: 'Stagnant',
-              data: [14], // Updated data for Stagnant
-              backgroundColor: 'rgba(255, 159, 64, 0.2)',
-              borderColor: 'rgba(255, 159, 64, 1)',
-              borderWidth: 1,
-              barPercentage: 0.25 // Reduce bar width
-            },
-            {
-              label: 'Expected Growth',
-              data: [25], // Updated data for Expected Growth
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              borderColor: 'rgba(75, 192, 192, 1)',
-              borderWidth: 1,
-              barPercentage: 0.25 // Reduce bar width
-            },
-            {
-              label: 'Exceeded Expectation',
-              data: [61], // Updated data for Exceeded Expectation
-              backgroundColor: 'rgba(54, 162, 235, 0.2)',
-              borderColor: 'rgba(54, 162, 235, 1)',
-              borderWidth: 1,
-              barPercentage: 0.25 // Reduce bar width
-            }
-          ]
-        },
-        options: {
-          plugins: {
-            datalabels: {
-              anchor: 'center', // Center the labels
-              align: 'center', // Center the labels
-              formatter: function(value) {
-                return value > 0 ? value.toFixed(1) : ''; // Only show values greater than 0
-              }
-            },
-            legend: {
-              position: 'bottom' // Move labels to the bottom
-            }
-          },
-          scales: {
-            y: {
-              title: {
-                display: true,
-                text: '% of Students' // Updated y-axis title
-              },
-              min: 0,
-              max: 100, // Set max to 100 for percentage values
-              ticks: {
-                stepSize: 10 // Adjust step size for percentage values
-              },
-              stacked: true // Enable stacking
-            },
-            x: {
-              title: {
-                display: true,
-                text: 'Types'
-              },
-              grid: {
-                display: false // Remove origin value
-              },
-              stacked: true // Enable stacking
-            }
-          }
-        },
-        plugins: [ChartDataLabels]
-      });
-    </script>
+    <script src="script.js"></script> <!-- Include the external script file -->
 </body>
 </html>
