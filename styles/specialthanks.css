@@ -1,0 +1,48 @@
+.volunteers-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.volunteers-section h2 {
+    margin-bottom: 30px;
+}
+
+.volunteers-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volunteers-row div {
+    margin: 20px;
+    text-align: center;
+}
+
+.volunteers-row img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.volunteers-row h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.circular-icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
