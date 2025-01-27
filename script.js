@@ -125,11 +125,11 @@ var ctx2 = document.getElementById('studentGrowthChart').getContext('2d');
 var studentGrowthChart = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['Student Growth'], // Single label for combined bar
+        labels: [''],
         datasets: [
             {
                 label: 'Stagnant',
-                data: [14], // Updated data for Stagnant
+                data: [14], // Updated data for Stagnant Students in percentage
                 backgroundColor: 'rgba(255, 159, 64, 0.2)',
                 borderColor: 'rgba(255, 159, 64, 1)',
                 borderWidth: 1,
@@ -137,7 +137,7 @@ var studentGrowthChart = new Chart(ctx2, {
             },
             {
                 label: 'Expected Growth',
-                data: [25], // Updated data for Expected Growth
+                data: [25], // Updated data for Expected Growth Students in percentage
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
@@ -145,7 +145,7 @@ var studentGrowthChart = new Chart(ctx2, {
             },
             {
                 label: 'Exceeded Expectation',
-                data: [61], // Updated data for Exceeded Expectation
+                data: [61], // Updated data for Exceeded Expectation Students in percentage
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
@@ -159,11 +159,21 @@ var studentGrowthChart = new Chart(ctx2, {
                 anchor: 'center', // Center the labels
                 align: 'center', // Center the labels
                 formatter: function(value) {
-                    return value > 0 ? value.toFixed(1) : ''; // Only show values greater than 0
+                    return value > 0 ? value.toFixed(0) + '%' : ''; // Only show values greater than 0, no decimals
                 }
             },
             legend: {
                 position: 'bottom' // Move labels to the bottom
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        const datasetLabel = tooltipItem.dataset.label || '';
+                        const value = tooltipItem.raw;
+                        const studentCount = Math.round(value * 28 / 100); // Calculate the number of students
+                        return `${datasetLabel}: ${studentCount} students`; // No decimals
+                    }
+                }
             }
         },
         scales: {
