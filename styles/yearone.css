@@ -1,6 +1,6 @@
 #yearone {
     background-color: #F5EFFF;
-    /* Add specific styles for Exposure Trips section */
+
 }
 
 .school-image, .school-description, .student-image, .student-description {
@@ -143,8 +143,6 @@
 }
 
 .carousel-caption h5 {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
 }
@@ -207,6 +205,15 @@
   box-orient: unset;
   max-height: none; /* Allow full height */
   margin-bottom: 1rem; /* Ensure consistent margin */
+}
+
+.card-body.d-flex {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.ml-0 {
+    margin-left: 0 !important;
 }
 
 .card-body h3 {
@@ -273,6 +280,50 @@
     background-color: rgba(0, 0, 0, 0.5); /* Add background color to the navigation icons */
     border-radius: 50%; /* Make the icons circular */
     padding: 10px; /* Add padding to the icons */
+}
+
+.lows-image {
+    width: 15%; /* Adjust the width as needed */
+    margin-right: 20px; /* Add some space between the image and the paragraph */
+}
+
+.card-body .flex-grow-1 {
+    flex: 1;
+    max-width: calc(100% - 15% - 20px); /* Ensure the paragraph doesn't span the full width */
+}
+
+.image-div, .paragraph-div {
+    background-color: #F5EFFF;
+    padding: 10px; /* Reduce padding to 10px */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure the content is stacked vertically */
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.image-div {
+    width: 25%; /* Set the width of the image div to 25% */
+}
+
+.paragraph-div {
+    width: 85%; /* Set the width of the paragraph div to 85% */
+}
+
+.paragraph-div p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px; /* Add margin of 10px on all sides */
+    align-self: center; /* Center the paragraph horizontally */
+}
+
+.image-div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 

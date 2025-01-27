@@ -205,15 +205,41 @@ function isInViewport(element) {
     );
 }
 
+// Function to check if an element is fully out of viewport
+function isOutOfViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.bottom < 0 ||
+        rect.top > (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
 // Function to animate charts
+let rcChartInView = false;
+let studentChartInView = false;
+
 function animateCharts() {
-    if (isInViewport(document.getElementById('rcLevelChart'))) {
-        rcLevelChart.destroy();
-        rcLevelChart = new Chart(ctx, rcLevelChart.config);
+    const rcChartElement = document.getElementById('rcLevelChart');
+    const studentChartElement = document.getElementById('studentGrowthChart');
+
+    if (isInViewport(rcChartElement)) {
+        if (!rcChartInView) {
+            rcLevelChart.destroy();
+            rcLevelChart = new Chart(ctx, rcLevelChart.config);
+            rcChartInView = true;
+        }
+    } else if (isOutOfViewport(rcChartElement)) {
+        rcChartInView = false;
     }
-    if (isInViewport(document.getElementById('studentGrowthChart'))) {
-        studentGrowthChart.destroy();
-        studentGrowthChart = new Chart(ctx2, studentGrowthChart.config);
+
+    if (isInViewport(studentChartElement)) {
+        if (!studentChartInView) {
+            studentGrowthChart.destroy();
+            studentGrowthChart = new Chart(ctx2, studentGrowthChart.config);
+            studentChartInView = true;
+        }
+    } else if (isOutOfViewport(studentChartElement)) {
+        studentChartInView = false;
     }
 }
 
@@ -233,6 +259,18 @@ function toggleReadMore(id) {
         moreText.style.display = 'none';
         readMoreLink.textContent = 'Read More';
         cardBody.classList.remove('expanded');
+    }
+}
+
+function toggleReadMore(id) {
+    const moreText = document.getElementById('more-text-' + id);
+    const readMoreLink = document.getElementById('read-more-link-' + id);
+    if (moreText.style.display === 'none') {
+        moreText.style.display = 'inline';
+        readMoreLink.textContent = 'Read Less';
+    } else {
+        moreText.style.display = 'none';
+        readMoreLink.textContent = 'Read More';
     }
 }
 
