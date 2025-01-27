@@ -220,3 +220,19 @@ function animateCharts() {
 // Add scroll event listener
 window.addEventListener('scroll', animateCharts);
 
+// Function to toggle Read More
+function toggleReadMore(id) {
+    const cardBody = document.querySelector(`#read-more-link-${id}`).closest('.card-body');
+    const moreText = document.getElementById(`more-text-${id}`);
+    const readMoreLink = document.getElementById(`read-more-link-${id}`);
+    if (moreText.style.display === 'none') {
+        moreText.style.display = 'inline';
+        readMoreLink.textContent = 'Read Less';
+        cardBody.classList.add('expanded');
+    } else {
+        moreText.style.display = 'none';
+        readMoreLink.textContent = 'Read More';
+        cardBody.classList.remove('expanded');
+    }
+}
+
