@@ -12,6 +12,14 @@
     background-color: var(--bg-light);
 }
 
+.custom-borders{
+    /* border: 2px solid ; */
+    background-color: #ffffff;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .school-image, .school-description, .student-image, .student-description {
     background-color: var(--bg-light);
     padding: 20px;
@@ -357,5 +365,6 @@
     height: auto;
     border-radius: 10px;
 }
+
 
 

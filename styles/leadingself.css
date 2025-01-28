@@ -5,3 +5,26 @@
     --lavender-dark: #A294F9;
     --lavender-darkest: #7A6BFF;
 }
+
+.card {
+    margin-top: 1rem;
+    border-radius: 10px; /* Add corner radius */
+}
+
+.card-body {
+    padding: 1rem;
+    border-radius: 10px; /* Add corner radius */
+}
+
+.card-body img {
+    border-radius: 10px; /* Add corner radius */
+}
+
+.card-body h3 {
+    text-align: center;
+}
+
+.card-body p {
+    text-align: center;
+}
+
