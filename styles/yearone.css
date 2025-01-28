@@ -135,6 +135,9 @@
     text-align: left; /* Align text to the left */
     opacity: 1; /* Always visible */
     transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    width: 100%; /* Ensure the overlay covers the entire width of the image */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .carousel-caption h5, .carousel-caption p {
