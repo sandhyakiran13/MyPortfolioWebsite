@@ -1,10 +1,19 @@
-#yearone {
-    background-color: #F5EFFF;
+:root {
+    --bg-light: #E5D9F2;
+    --bg-dark: #CDC1FF;
+    --primary: #334E68;
+    --secondary: #486581;
+    --accent: #F7D070;
+    --text-light: #FFFFFF;
+    --text-dark: #102A43;
+}
 
+#yearone {
+    background-color: var(--bg-light);
 }
 
 .school-image, .school-description, .student-image, .student-description {
-    background-color: #F5EFFF;
+    background-color: var(--bg-light);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,11 +58,12 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: var(--primary);
 }
 
 .school-description p {
     font-size: 16px;
-    color: #555;
+    color: var(--secondary);
     line-height: 1.6;
 }
 
@@ -64,7 +74,7 @@
 }
 
 .challenge, .solution, .data, .exposure, .high-lows {
-    background-color: #F5EFFF;
+    background-color: var(--bg-light);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,7 +83,7 @@
 }
 
 .challenge {
-    background-color: #F5EFFF;
+    background-color: var(--bg-light);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,11 +111,12 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center the title in the container */
+    color: var(--primary);
 }
 
 .challenge p, .solution p, .data p, .exposure p, .high-lows p {
     font-size: 16px; /* Reduce font size for the paragraphs */
-    color: #555;
+    color: var(--secondary);
     line-height: 1.6;
 }
 
@@ -141,7 +152,7 @@
 }
 
 .carousel-caption h5, .carousel-caption p {
-    color: #fff; /* White text color */
+    color: var(--text-light); /* White text color */
     margin: 0; /* Remove default margin */
 }
 
@@ -154,7 +165,7 @@
   max-width: 500px; /* Increase the maximum width for the graph container */
   margin: 0 10px; /* Add some margin to separate the graphs */
   padding: 20px; /* Add some padding */
-  background-color: #f9f9f9; /* Light background color */
+  background-color: var(--bg-dark); /* Light background color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   height: 500px; /* Adjust the height of the graph container */
@@ -278,6 +289,24 @@
     border-radius: 10px;
 }
 
+.image-container-4-3 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container-4-3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5); /* Add background color to the navigation icons */
@@ -296,7 +325,7 @@
 }
 
 .image-div, .paragraph-div {
-    background-color: #F5EFFF;
+    background-color: var(--bg-light);
     padding: 10px; /* Reduce padding to 10px */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -317,7 +346,7 @@
 
 .paragraph-div p {
     font-size: 16px;
-    color: #555;
+    color: var(--secondary);
     line-height: 1.6;
     margin: 10px; /* Add margin of 10px on all sides */
     align-self: center; /* Center the paragraph horizontally */
