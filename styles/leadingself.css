@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --lavender-lighest: #F5EFFF;
     --lavender-light: #E5D9F2;
@@ -26,5 +30,24 @@
 
 .card-body p {
     text-align: center;
+}
+
+/* Add 3:2 aspect ratio for the Internship Experience image */
+.image-container-3-2 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container-3-2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
