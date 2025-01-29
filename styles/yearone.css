@@ -366,5 +366,30 @@
     border-radius: 10px;
 }
 
+.parallax {
+    background-image: url('../media/year_1/imgs/exam_study.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1.text-center {
+    padding-top: 0.5rem; /* Reduce top padding */
+    padding-bottom: 1rem; /* Keep bottom padding */
+}
+
 
 

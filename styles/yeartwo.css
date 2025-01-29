@@ -5,3 +5,23 @@
     --lavender-dark: #A294F9;
     --lavender-darkest: #7A6BFF;
 }
+
+.parallax {
+    background-image: url('../media/year_2/imgs/celebration_4.jpeg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
