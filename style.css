@@ -11,12 +11,18 @@
     --primary: #334E68;
     --secondary: #486581;   
     --accent: #F7D070;
+
     --text-light: #FFFFFF;
     --text-dark: #102A43;
+
+    --primary-green: #B4D6CD;
+    --primary-yellow: #FFDA76;
+    --primary-orange: #FF8C9E;
+    --primary-pink: #FF4E88;
 }
 
 body {
-    background-color: var(--bg-light);
+    background-color: var(--primary-green);
     color: var(--text-dark);
 }
 
@@ -27,7 +33,11 @@ body {
 }
 
 .custom-nav {
-    background-color: var(--primary);
+    background-color: var(--primary-pink);
+}
+
+.nav-hover:hover{
+    color: var(--text-dark);
 }
 
 /* Video container and overlay styles */
@@ -88,20 +98,6 @@ body {
     font-size: 18px; /* Set the font size for the paragraph */
 }
 
-@media (max-width: 768px) {
-    .video-overlay {
-        bottom: 10px; /* Adjust the position for smaller screens */
-        left: 10px; /* Adjust the position for smaller screens */
-        font-size: 14px; /* Adjust the font size for smaller screens */
-    }
-    .video-overlay h1 {
-        font-size: 24px; /* Adjust the font size for smaller screens */
-    }
-    .video-overlay p {
-        font-size: 12px; /* Adjust the font size for smaller screens */
-    }
-}
-
 /* Carousel control styles */
 .carousel-indicators li {
     background-color: #000; /* Set the background color for the carousel indicators */
@@ -138,7 +134,7 @@ body {
 /* Exposure section styles */
 .exposure-section {
     padding: 50px 0; /* Add padding above and below the exposure section */
-    background-color: var(--bg-light); /* Set the background color for the exposure section */
+    background-color: var(--primary-yellow); /* Set the background color for the exposure section */
 }
 
 .exposure-section h2 {
@@ -181,12 +177,32 @@ body {
 /* Utilitie classes */
 
 .card-border-white{
-    border: 5px solid var(--bg-extralight);
+    border: 5px solid var(--text-light);
     border-radius: 10px;
 }
 
 .zero-padding{
     padding-inline: 0px;
+}
+
+.bg-yellow{
+    background-color: var(--primary-yellow);
+}
+
+/* Responsivness */
+
+@media (max-width: 768px) {
+    .video-overlay {
+        bottom: 10px; /* Adjust the position for smaller screens */
+        left: 10px; /* Adjust the position for smaller screens */
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+    .video-overlay h1 {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+    }
+    .video-overlay p {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+    }
 }
 
 @media (max-width: 425px) {

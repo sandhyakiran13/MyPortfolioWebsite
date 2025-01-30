@@ -4,8 +4,15 @@
     --primary: #334E68;
     --secondary: #486581;
     --accent: #F7D070;
+    
     --text-light: #FFFFFF;
     --text-dark: #102A43;
+
+    --primary-green: #B4D6CD;
+    --primary-yellow: #FFDA76;
+    --primary-orange: #FF8C9E;
+    --primary-pink: #FF4E88;
+    --text-dark: #000000;
 }
 
 body {

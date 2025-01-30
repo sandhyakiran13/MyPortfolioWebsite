@@ -4,6 +4,14 @@
     --lavender-medium: #CDC1FF;
     --lavender-dark: #A294F9;
     --lavender-darkest: #7A6BFF;
+
+    --text-light: #FFFFFF;
+    --text-dark: #102A43;
+
+    --primary-green: #B4D6CD;
+    --primary-yellow: #FFDA76;
+    --primary-orange: #FF8C9E;
+    --primary-pink: #FF4E88;
 }
 .volunteers-section {
     text-align: center;
