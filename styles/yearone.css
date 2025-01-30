@@ -15,7 +15,7 @@
 .custom-borders{
     /* border: 2px solid ; */
     background-color: #ffffff;
-    padding-block: 1rem;
+    padding-block: 0.5rem; /* Reduce padding between sections */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -372,8 +372,20 @@
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Ensure the image covers the entire container */
     position: relative;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure the overlay is above the image */
 }
 
 .parallax-title {
@@ -382,13 +394,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure the title is above the overlay */
+    padding: 20px; /* Add padding */
+    border: 5px solid white; /* Add border */
+    background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    text-align: center; /* Center the text */
 }
 
 h1.text-center {
     padding-top: 0.5rem; /* Reduce top padding */
-    padding-bottom: 1rem; /* Keep bottom padding */
+    padding-bottom: 0.5rem; /* Reduce bottom padding */
+    /* Ensure consistency with Year Two title */
+    font-size: 2.5rem;
+    color: #333;
 }
 
 
