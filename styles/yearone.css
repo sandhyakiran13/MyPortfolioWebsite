@@ -177,6 +177,7 @@
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   height: 500px; /* Adjust the height of the graph container */
+  border: 5px solid white; /* Add white border */
 }
 
 .card {
@@ -187,6 +188,7 @@
   display: flex;
   flex-direction: column;
   height: 100%; /* Ensure all cards have the same height */
+  border: 5px solid white;
 }
 
 .card-body {
@@ -305,7 +307,8 @@
     border-radius: 10px;
 }
 
-.image-container-4-3 img {
+.image-container-4-3 img,
+.image-container-4-3 video {
     position: absolute;
     top: 0;
     left: 0;
@@ -366,6 +369,16 @@
     border-radius: 10px;
 }
 
+.card.card-border-white {
+    /* background-color: transparent; Revert to transparent background */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border radius */
+    box-shadow: none; /* Remove shadow */
+    margin-bottom: 0; /* Remove margin-bottom */
+    margin-top: 0; /* Remove margin-top */
+    border-radius: 10px;
+}
+
 .parallax {
     background-image: url('../media/year_1/imgs/exam_study.jpg');
     height: 500px;
@@ -409,6 +422,53 @@ h1.text-center {
     /* Ensure consistency with Year Two title */
     font-size: 2.5rem;
     color: #333;
+}
+
+/* Custom CSS for the debate section cards */
+.debate-card {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px; /* Add margin-top to create space */
+}
+
+.debate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.debate-card h3 {
+    font-size: 20px; /* Reduce font size for the title */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Center the title in the container */
+    color: var(--primary);
+}
+
+.debate-card h6 {
+    font-size: 16px; /* Reduce font size for the subtitle */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Center the subtitle in the container */
+    color: var(--secondary);
+}
+
+.debate-card p {
+    font-size: 16px; /* Reduce font size for the paragraphs */
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+.debate-card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.debate-card a:hover {
+    text-decoration: underline;
 }
 
 

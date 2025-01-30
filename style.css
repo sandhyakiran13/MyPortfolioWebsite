@@ -5,10 +5,11 @@
 }
 
 :root {
+    --bg-extralight:#FFFFFF;
     --bg-light: #E5D9F2;
     --bg-dark: #CDC1FF;
     --primary: #334E68;
-    --secondary: #486581;
+    --secondary: #486581;   
     --accent: #F7D070;
     --text-light: #FFFFFF;
     --text-dark: #102A43;
@@ -175,4 +176,15 @@ body {
     font-size: 16px; /* Set the font size for the card text */
     color: var(--secondary); /* Set the text color */
     line-height: 1.6; /* Set the line height */
+}
+
+/* Utilitie classes */
+
+.card-border-white{
+    border: 5px solid var(--bg-extralight);
+    border-radius: 10px;
+}
+
+.zero-padding{
+    padding-inline: 0px;
 }
