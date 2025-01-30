@@ -85,3 +85,149 @@
     border-radius: 10px;
     border-radius: 10px;
 }
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-position: top;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+}
+
+.chart-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.chart-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h1 {
+    font-size: 18px;
+    color: #333;
+}
+
+.chart-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chart-item {
+    text-align: center;
+    width: 120px;
+    margin: 10px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    background: conic-gradient(#f0f0f0 0% 100%); /* Default background */
+    border: 10px solid transparent; /* Add border to create ring effect */
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Dynamic Arc Styles */ 
+.circle[data-percentage="70"] {
+    background: conic-gradient(#b71c1c 0% 70%, transparent 70% 100%);
+    border-color: #b71c1c; /* Match border color to the arc color */
+}
+
+.circle[data-percentage="0"] {
+    background: conic-gradient(#f0f0f0 0% 100%, transparent 100%);
+    border-color: #f0f0f0; /* Match border color to the arc color */
+}
+
+.circle[data-percentage="13"] {
+    background: conic-gradient(#00bcd4 0% 13%, transparent 13% 100%);
+    border-color: #00bcd4; /* Match border color to the arc color */
+}
+
+.circle[data-percentage="17"] {
+    background: conic-gradient(#616161 0% 17%, transparent 17% 100%);
+    border-color: #616161; /* Match border color to the arc color */
+}
+
+/* Ensure the center of the circle is transparent */
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: #fff; /* Background color of the center */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chart-item p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.chart-item .value {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+.minimum {
+    color: #00bcd4;
+}
+
+.not-assessed {
+    color: #616161;
+}
