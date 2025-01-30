@@ -51,3 +51,6 @@ html {
     border-radius: 10px;
 }
 
+.content-centre{
+    align-self: center;
+}
