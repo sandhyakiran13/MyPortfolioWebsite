@@ -283,4 +283,3 @@ function toggleReadMore(id) {
         readMoreLink.textContent = 'Read More';
     }
 }
-

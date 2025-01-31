@@ -1,27 +1,20 @@
-:root {
-    --bg-light: #E5D9F2;
-    --bg-dark: #CDC1FF;
-    --primary: #334E68;
-    --secondary: #486581;
-    --accent: #F7D070;
-    
+:root {    
     --text-light: #FFFFFF;
     --text-dark: #102A43;
 
-    --primary-green: #B4D6CD;
-    --primary-yellow: #FFDA76;
-    --primary-orange: #FF8C9E;
-    --primary-pink: #FF4E88;
-    --text-dark: #000000;
+    --primary-green: #191825;
+    --primary-yellow: #865DFF;
+    --primary-orange: #E384FF;
+    --primary-pink: #FFA3FD;
 }
 
 body {
-    background-color: var(--bg-light);
+    background-color: var(--primary-yellow);
     color: var(--text-dark);
 }
 
 .left-div, .right-div {
-    background-color: var(--bg-dark);
+    background-color: var(--primary-yellow);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,12 +38,12 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     align-self: center; /* Center the title horizontally */
-    color: var(--primary);
+    color: var(--text-light);
 }
 
 .left-div p, .right-div p {
     font-size: 16px;
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
     align-self: center; /* Center the paragraph horizontally */
 }
@@ -62,7 +55,7 @@ body {
 }
 
 .image-div, .paragraph-div {
-    background-color: var(--bg-dark);
+    background-color: var(--primary-yellow);
     padding: 10px; /* Reduce padding to 10px */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,6 +64,7 @@ body {
     flex-direction: column; /* Ensure the content is stacked vertically */
     align-items: center;
     justify-content: center; /* Center the content horizontally */
+    border: 5px solid var(--text-light);
 }
 
 .image-div {
@@ -87,12 +81,12 @@ body {
     font-weight: bold;
     margin: 10px 0; /* Add margin of 10px on top and bottom */
     align-self: center; /* Center the title horizontally */
-    color: var(--primary);
+    color: var(--text-light);
 }
 
 .paragraph-div p {
     font-size: 16px;
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
     margin: 10px; /* Add margin of 10px on all sides */
     align-self: center; /* Center the paragraph horizontally */

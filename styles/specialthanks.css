@@ -1,17 +1,11 @@
 :root{
-    --lavender-lighest: #F5EFFF;
-    --lavender-light: #E5D9F2;
-    --lavender-medium: #CDC1FF;
-    --lavender-dark: #A294F9;
-    --lavender-darkest: #7A6BFF;
-
     --text-light: #FFFFFF;
-    --text-dark: #102A43;
-
-    --primary-green: #B4D6CD;
-    --primary-yellow: #FFDA76;
-    --primary-orange: #FF8C9E;
-    --primary-pink: #FF4E88;
+    --text-dark: #ffffff;
+    
+    --primary-green: #191825;
+    --primary-yellow: #865DFF;
+    --primary-orange: #E384FF;
+    --primary-pink: #FFA3FD;
 }
 .volunteers-section {
     text-align: center;
@@ -40,7 +34,7 @@
 }
 
 .banner {
-    background-color: #f8f9fa;
+    background-color: var(--primary-yellow);
     padding: 20px;
     text-align: center;
     font-size: 18px;

@@ -5,26 +5,20 @@
 }
 
 :root {
-    --bg-extralight:#FFFFFF;
-    --bg-light: #E5D9F2;
-    --bg-dark: #CDC1FF;
-    --primary: #334E68;
-    --secondary: #486581;   
-    --accent: #F7D070;
+    --text-light:#ffffff;
+    --text-dark:#FFFFFF ;
 
-    --text-light: #FFFFFF;
-    --text-dark: #102A43;
-
-    --primary-green: #B4D6CD;
-    --primary-yellow: #FFDA76;
-    --primary-orange: #FF8C9E;
-    --primary-pink: #FF4E88;
+    --primary-green: #191825;
+    --primary-yellow: #191825;
+    --primary-orange: #E384FF;
+    --primary-pink: #FFA3FD;
 }
 
 body {
     background-color: var(--primary-green);
     color: var(--text-dark);
 }
+
 
 .navbar-brand img {
     border-radius: 50%;
@@ -39,7 +33,6 @@ body {
 .nav-hover:hover{
     color: var(--text-dark);
 }
-
 /* Video container and overlay styles */
 .video-container {
     position: relative;

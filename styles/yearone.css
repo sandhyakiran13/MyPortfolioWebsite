@@ -1,17 +1,11 @@
-:root {
-    --bg-light: #E5D9F2;
-    --bg-dark: #CDC1FF;
-    --primary: #334E68;
-    --secondary: #486581;
-    --accent: #F7D070;
-    
+:root {    
     --text-light: #FFFFFF;
     --text-dark: #102A43;
 
-    --primary-green: #B4D6CD;
-    --primary-yellow: #FFDA76;
-    --primary-orange: #FF8C9E;
-    --primary-pink: #FF4E88;
+    --primary-green: #191825;
+    --primary-yellow: #191825;
+    --primary-orange: #E384FF;
+    --primary-pink: #FFA3FD;
 }
 
 .custom-borders{
@@ -68,12 +62,12 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--primary);
+    color: var(--text-light);
 }
 
 .school-description p {
     font-size: 16px;
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
 }
 
@@ -121,12 +115,12 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center the title in the container */
-    color: var(--primary);
+    color: var(--text-light);
 }
 
 .challenge p, .solution p, .data p, .exposure p, .high-lows p {
     font-size: 16px; /* Reduce font size for the paragraphs */
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
 }
 
@@ -191,6 +185,7 @@
   flex-direction: column;
   height: 100%; /* Ensure all cards have the same height */
   border: 5px solid var(--text-light);
+  background-color: var(--primary-yellow);
 }
 
 .card-body {
@@ -359,7 +354,7 @@
 
 .paragraph-div p {
     font-size: 16px;
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
     margin: 10px; /* Add margin of 10px on all sides */
     align-self: center; /* Center the paragraph horizontally */
@@ -408,12 +403,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--text-light);
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2; /* Ensure the title is above the overlay */
     padding: 20px; /* Add padding */
-    border: 5px solid white; /* Add border */
+    border: 5px solid var(--text-light); /* Add border */
     background: rgba(0, 0, 0, 0); /* Semi-transparent background */
     text-align: center; /* Center the text */
 }
@@ -423,7 +418,7 @@ h1.text-center {
     padding-bottom: 0.5rem; /* Reduce bottom padding */
     /* Ensure consistency with Year Two title */
     font-size: 2.5rem;
-    color: #333;
+    color: var(--text-light);
 }
 
 /* Custom CSS for the debate section cards */
@@ -447,7 +442,7 @@ h1.text-center {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center the title in the container */
-    color: var(--primary);
+    color: var(--text-light);
 }
 
 .debate-card h6 {
@@ -455,17 +450,17 @@ h1.text-center {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center the subtitle in the container */
-    color: var(--secondary);
+    color: var(--text-light);
 }
 
 .debate-card p {
     font-size: 16px; /* Reduce font size for the paragraphs */
-    color: var(--secondary);
+    color: var(--text-light);
     line-height: 1.6;
 }
 
 .debate-card a {
-    color: var(--accent);
+    color: var(--text-light);
     text-decoration: none;
 }
 

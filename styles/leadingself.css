@@ -10,12 +10,12 @@ html {
     --lavender-darkest: #7A6BFF;
 
     --text-light: #FFFFFF;
-    --text-dark: #102A43;
+    --text-dark: #ffffff;
 
-    --primary-green: #B4D6CD;
-    --primary-yellow: #FFDA76;
-    --primary-orange: #FF8C9E;
-    --primary-pink: #FF4E88;
+    --primary-green: #191825;
+    --primary-yellow: #191825;
+    --primary-orange: #E384FF;
+    --primary-pink: #FFA3FD;
 }
 
 .card {
@@ -26,6 +26,8 @@ html {
 .card-body {
     padding: 1rem;
     border-radius: 10px; /* Add corner radius */
+    background-color: var(--primary-yellow);
+    border: 5px solid var(--text-light);
 }
 
 .card-body img {
@@ -61,4 +63,9 @@ html {
 
 .content-centre{
     align-self: center;
+}
+
+/* Utilitie classes */
+.curved-border {
+    border-radius: 10px;
 }
