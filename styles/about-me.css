@@ -98,3 +98,19 @@ body {
     border-radius: 10px;
 }
 
+@media (max-width: 420px) {
+    .left-div, .right-div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .image-div, .paragraph-div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+}
+

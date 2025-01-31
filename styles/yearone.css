@@ -172,7 +172,7 @@
   background-color: var(--primary-yellow); /* Light background color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  height: 500px; /* Adjust the height of the graph container */
+  height: 530px; /* Adjust the height of the graph container */
   border: 5px solid var(--text-light); /* Add white border */
 }
 
@@ -466,4 +466,94 @@ h1.text-center {
 
 .debate-card a:hover {
     text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .school-image, .school-description {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .school-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .challenge, .solution, .data, .exposure, .high-lows {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .challenge:nth-child(2n), .challenge:nth-child(3), .challenge:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .graph-container {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .image-div, .paragraph-div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image-div {
+        margin-bottom: 10px;
+    }
+
+    .paragraph-div p {
+        font-size: 14px;
+    }
+
+    .carousel-caption {
+        padding: 5px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem;
+    }
+
+    .card-body p {
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        max-height: 7.5em;
+    }
+
+    .card-body.expanded p {
+        max-height: none;
+    }
+
+    .card-body p {
+        max-height: none;
+    }
+
+    .card-body h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+
+    .parallax-title {
+        font-size: 2rem;
+    }
+
+    h1.text-center {
+        font-size: 2rem;
+    }
+
+    .debate-card h3, .debate-card h6, .debate-card p {
+        font-size: 14px;
+    }
 }

@@ -233,3 +233,48 @@ body {
         font-size: 14px;
     }
 }
+
+@media (max-width: 420px) {
+    .navbar-brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .video-overlay {
+        top: auto;
+        bottom: 10px;
+        left: 10px;
+        width: 90%;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .video-overlay h1 {
+        font-size: 20px;
+    }
+
+    .video-overlay p {
+        font-size: 10px;
+    }
+
+    .exposure-section h2 {
+        font-size: 24px;
+    }
+
+    .exposure-section .card-title {
+        font-size: 18px;
+    }
+
+    .exposure-section .card-text {
+        font-size: 14px;
+    }
+
+    .image-div, .paragraph-div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+}
