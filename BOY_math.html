@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap To Grade Distribution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fbfd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .progress {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+        }
+        .progress svg {
+            transform: rotate(-90deg);
+        }
+        .progress circle {
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+        .progress .bg {
+            stroke: #eee;
+        }
+        .progress .bar {
+            stroke-dasharray: 251;
+            stroke-dashoffset: 251;
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+        .progress span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .label {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .count {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Gap To Grade Distribution</div>
+        <div class="subtitle">The below two visuals display the results based on the Gap to Grade category selected</div>
+        <div class="chart-container">
+            <div class="progress" data-percentage="6" data-color="#cc0000">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="40"></circle>
+                    <circle class="bar" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <span>6%</span>
+                <div class="label"><20%</div>
+                <div class="count" style="color: #cc0000;">2</div>
+            </div>
+            <div class="progress" data-percentage="19" data-color="#ff6600">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="40"></circle>
+                    <circle class="bar" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <span>19%</span>
+                <div class="label">20-34%</div>
+                <div class="count" style="color: #ff6600;">6</div>
+            </div>
+            <div class="progress" data-percentage="39" data-color="#f4a300">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="40"></circle>
+                    <circle class="bar" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <span>39%</span>
+                <div class="label">34-60%</div>
+                <div class="count" style="color: #f4a300;">12</div>
+            </div>
+            <div class="progress" data-percentage="29" data-color="#7dc873">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="40"></circle>
+                    <circle class="bar" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <span>29%</span>
+                <div class="label">60-100%</div>
+                <div class="count" style="color: #7dc873;">9</div>
+            </div>
+            <div class="progress" data-percentage="6" data-color="#666">
+                <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="40"></circle>
+                    <circle class="bar" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <span>6%</span>
+                <div class="label">Not Assessed</div>
+                <div class="count" style="color: #666;">2</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.progress').forEach(progress => {
+            let percentage = progress.getAttribute('data-percentage');
+            let color = progress.getAttribute('data-color');
+            let circle = progress.querySelector('.bar');
+            let offset = 251 - (percentage / 100) * 251;
+            circle.style.strokeDashoffset = offset;
+            circle.style.stroke = color;
+        });
+    </script>
+</body>
+</html>
+
+
+
+I have changed the values again 0% KG 0, 13% High Risk 4, 32% Potential to reach Minimum Grade Proficiency 10, 52% High potential to reach Minimum Grade Proficiency 16, 3% Not Assessed 1.
