@@ -35,6 +35,7 @@
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .parallax-box {
@@ -46,6 +47,7 @@
     border: 5px solid white; /* Add border */
     z-index: 2;
     text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .parallax-title {
@@ -219,4 +221,70 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center the cards */
+}
+
+.graph-container {
+    max-width: 500px; /* Increase the maximum width for the graph container */
+    margin: 0 10px; /* Add some margin to separate the graphs */
+    padding: 20px; /* Add some padding */
+    background-color: var(--primary-yellow); /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    height: 530px; /* Adjust the height of the graph container */
+    border: 5px solid var(--text-light); /* Add white border */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .parallax-title {
+        font-size: 2rem;
+        white-space: nowrap; /* Allow text to wrap */
+    }
+
+    .parallax-subtitle {
+        font-size: 1.5rem;
+        white-space: nowrap; /* Allow text to wrap */
+    }
+
+    .parallax-box {
+        padding: 10px; /* Reduce padding inside the box */
+        white-space: nowrap; /* Allow text to wrap */
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .academic-progress {
+        width: 40%;
+        height: 100px;
+    }
+
+    .academic-progress span {
+        font-size: 14px;
+    }
+
+    .academic-label {
+        font-size: 10px;
+        
+    }
+
+    .academic-count {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .card-img-top {
+        aspect-ratio: auto;
+    }
+
+    .image-container .overlay {
+        font-size: 12px;
+    }
+
+    .graph-container {
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
