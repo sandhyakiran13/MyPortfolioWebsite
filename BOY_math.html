@@ -14,7 +14,7 @@
             height: 100vh;
             text-align: center;
         }
-        .container {
+        .graph {
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -32,7 +32,7 @@
             color: #666;
             margin-bottom: 20px;
         }
-        .chart-container {
+        .chart-graph {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -67,7 +67,7 @@
             font-size: 16px;
             font-weight: bold;
         }
-        .label {
+        .circle-label {
             margin-top: 10px;
             font-size: 14px;
             font-weight: bold;
@@ -79,17 +79,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="graph">
         <div class="title">Gap To Grade Distribution</div>
         <div class="subtitle">The below two visuals display the results based on the Gap to Grade category selected</div>
-        <div class="chart-container">
+        <div class="chart-graph">
             <div class="progress" data-percentage="6" data-color="#cc0000">
                 <svg width="80" height="80" viewBox="0 0 100 100">
                     <circle class="bg" cx="50" cy="50" r="40"></circle>
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>6%</span>
-                <div class="label"><20%</div>
+                <div class="circle-label"><20%</div>
                 <div class="count" style="color: #cc0000;">2</div>
             </div>
             <div class="progress" data-percentage="19" data-color="#ff6600">
@@ -98,7 +98,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>19%</span>
-                <div class="label">20-34%</div>
+                <div class="circle-label">20-34%</div>
                 <div class="count" style="color: #ff6600;">6</div>
             </div>
             <div class="progress" data-percentage="39" data-color="#f4a300">
@@ -107,7 +107,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>39%</span>
-                <div class="label">34-60%</div>
+                <div class="circle-label">34-60%</div>
                 <div class="count" style="color: #f4a300;">12</div>
             </div>
             <div class="progress" data-percentage="29" data-color="#7dc873">
@@ -116,7 +116,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>29%</span>
-                <div class="label">60-100%</div>
+                <div class="circle-label">60-100%</div>
                 <div class="count" style="color: #7dc873;">9</div>
             </div>
             <div class="progress" data-percentage="6" data-color="#666">
@@ -125,7 +125,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>6%</span>
-                <div class="label">Not Assessed</div>
+                <div class="circle-label">Not Assessed</div>
                 <div class="count" style="color: #666;">2</div>
             </div>
         </div>

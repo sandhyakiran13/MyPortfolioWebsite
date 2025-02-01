@@ -283,3 +283,13 @@ function toggleReadMore(id) {
         readMoreLink.textContent = 'Read More';
     }
 }
+
+document.querySelectorAll('.academic-progress').forEach(progress => {
+    let percentage = progress.getAttribute('data-percentage');
+    let color = progress.getAttribute('data-color');
+    let circle = progress.querySelector('.academic-bar');
+    let offset = 251 - (percentage / 100) * 251;
+    
+    circle.style.strokeDashoffset = offset;
+    circle.style.stroke = color;
+});

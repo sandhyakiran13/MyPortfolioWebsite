@@ -14,7 +14,7 @@
             height: 100vh;
             text-align: center;
         }
-        .container {
+        .graph {
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -32,7 +32,7 @@
             color: #666;
             margin-bottom: 20px;
         }
-        .chart-container {
+        .chart-graph {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -67,7 +67,7 @@
             font-size: 16px;
             font-weight: bold;
         }
-        .label {
+        .circle-label {
             margin-top: 10px;
             font-size: 14px;
             font-weight: bold;
@@ -79,17 +79,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="graph">
         <div class="title">Gap To Grade Distribution</div>
         <div class="subtitle">The below two visuals display the results based on the Gap to Grade category selected</div>
-        <div class="chart-container">
+        <div class="chart-graph">
             <div class="progress" data-percentage="0" data-color="#ccc">
                 <svg width="80" height="80" viewBox="0 0 100 100">
                     <circle class="bg" cx="50" cy="50" r="40"></circle>
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>0%</span>
-                <div class="label">KG</div>
+                <div class="circle-label">KG</div>
                 <div class="count" style="color: #ccc;">0</div>
             </div>
             <div class="progress" data-percentage="0" data-color="#ccc">
@@ -98,7 +98,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>0%</span>
-                <div class="label">High Risk</div>
+                <div class="circle-label">High Risk</div>
                 <div class="count" style="color: #ccc;">0</div>
             </div>
             <div class="progress" data-percentage="0" data-color="#f4a300">
@@ -107,7 +107,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>0%</span>
-                <div class="label">Potential to reach Minimum Grade Proficiency</div>
+                <div class="circle-label">Potential to reach Minimum Grade Proficiency</div>
                 <div class="count" style="color: #f4a300;">0</div>
             </div>
             <div class="progress" data-percentage="39" data-color="#7dc873">
@@ -116,7 +116,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>39%</span>
-                <div class="label">High potential to reach Minimum Grade Proficiency</div>
+                <div class="circle-label">High potential to reach Minimum Grade Proficiency</div>
                 <div class="count" style="color: #7dc873;">12</div>
             </div>
             <div class="progress" data-percentage="61" data-color="#29b6f6">
@@ -125,7 +125,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>61%</span>
-                <div class="label">Minimum Grade Proficiency</div>
+                <div class="circle-label">Minimum Grade Proficiency</div>
                 <div class="count" style="color: #29b6f6;">19</div>
             </div>
             <div class="progress" data-percentage="0" data-color="#666">
@@ -134,7 +134,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>0%</span>
-                <div class="label">Not Assessed</div>
+                <div class="circle-label">Not Assessed</div>
                 <div class="count" style="color: #666;">0</div>
             </div>
         </div>

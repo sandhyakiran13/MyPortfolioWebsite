@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gap To Grade Distribution</title>
     <style>
+        :root {
+            --primary-green: #191825;
+            --text-dark: #FFFFFF;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8fbfd;
+            background-color: var(--primary-green);
+            color: var(--text-dark);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
         }
-        .container {
+
+        .graph {
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -22,43 +29,53 @@
             max-width: 1000px;
             width: 100%;
         }
+
         .title {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 5px;
+            color: var(--primary-green);
         }
+
         .subtitle {
             font-size: 14px;
             color: #666;
             margin-bottom: 20px;
         }
-        .chart-container {
+
+        .chart-graph {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
+
         .progress {
             position: relative;
             width: 80px;
             height: 80px;
             margin: 10px;
         }
+
         .progress svg {
             transform: rotate(-90deg);
         }
+
         .progress circle {
             fill: none;
             stroke-width: 8;
             stroke-linecap: round;
         }
+
         .progress .bg {
             stroke: #eee;
         }
+
         .progress .bar {
             stroke-dasharray: 251;
             stroke-dashoffset: 251;
             transition: stroke-dashoffset 1s ease-in-out;
         }
+
         .progress span {
             position: absolute;
             top: 50%;
@@ -66,12 +83,15 @@
             transform: translate(-50%, -50%);
             font-size: 16px;
             font-weight: bold;
+            color: var(--text-dark);
         }
-        .label {
+
+        .circle-label {
             margin-top: 10px;
             font-size: 14px;
             font-weight: bold;
         }
+
         .count {
             font-size: 14px;
             font-weight: bold;
@@ -79,27 +99,27 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="graph">
         <div class="title">Gap To Grade Distribution</div>
         <div class="subtitle">The below two visuals display the results based on the Gap to Grade category selected</div>
-        <div class="chart-container">
-            <div class="progress" data-percentage="0" data-color="#cc0000">
+        <div class="chart-graph">
+            <div class="progress" data-percentage="0" data-color="#ccc">
                 <svg width="80" height="80" viewBox="0 0 100 100">
                     <circle class="bg" cx="50" cy="50" r="40"></circle>
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>0%</span>
-                <div class="label"><20%</div>
-                <div class="count" style="color: #cc0000;">0</div>
+                <div class="circle-label" style="color: #ccc;">KG</div>
+                <div class="count" style="color: #ccc;">0</div>
             </div>
-            <div class="progress" data-percentage="13" data-color="#ff6600">
+            <div class="progress" data-percentage="13" data-color="#f44336">
                 <svg width="80" height="80" viewBox="0 0 100 100">
                     <circle class="bg" cx="50" cy="50" r="40"></circle>
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>13%</span>
-                <div class="label">20-34%</div>
-                <div class="count" style="color: #ff6600;">4</div>
+                <div class="circle-label" style="color: #f44336;">High Risk</div>
+                <div class="count" style="color: #f44336;">4</div>
             </div>
             <div class="progress" data-percentage="32" data-color="#f4a300">
                 <svg width="80" height="80" viewBox="0 0 100 100">
@@ -107,7 +127,7 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>32%</span>
-                <div class="label">34-60%</div>
+                <div class="circle-label" style="color: #f4a300;">Potential to reach Minimum Grade Proficiency</div>
                 <div class="count" style="color: #f4a300;">10</div>
             </div>
             <div class="progress" data-percentage="52" data-color="#7dc873">
@@ -116,17 +136,17 @@
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>52%</span>
-                <div class="label">60-100%</div>
+                <div class="circle-label" style="color: #7dc873;">High potential to reach Minimum Grade Proficiency</div>
                 <div class="count" style="color: #7dc873;">16</div>
             </div>
-            <div class="progress" data-percentage="3" data-color="#666">
+            <div class="progress" data-percentage="3" data-color="#29b6f6">
                 <svg width="80" height="80" viewBox="0 0 100 100">
                     <circle class="bg" cx="50" cy="50" r="40"></circle>
                     <circle class="bar" cx="50" cy="50" r="40"></circle>
                 </svg>
                 <span>3%</span>
-                <div class="label">Not Assessed</div>
-                <div class="count" style="color: #666;">1</div>
+                <div class="circle-label" style="color: #29b6f6;">Not Assessed</div>
+                <div class="count" style="color: #29b6f6;">1</div>
             </div>
         </div>
     </div>
