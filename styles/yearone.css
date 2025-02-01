@@ -147,7 +147,7 @@
     bottom: 0; /* Position at the bottom */
     left: 0;
     right: 0;
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center the text */
     opacity: 1; /* Always visible */
     transition: opacity 0.3s ease-in-out; /* Smooth transition */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
@@ -163,6 +163,9 @@
 .carousel-caption h5 {
     padding: 10px;
     border-radius: 5px;
+    display: inline-block; /* Ensure the text fits within the container */
+    width: 100%; /* Ensure the text fits within the container */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
     
 .graph-container {
@@ -263,19 +266,29 @@
 .image-container {
     position: relative;
     width: 100%;
-    padding-bottom: 66.67%; /* 3:2 aspect ratio */
     overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove padding below the images */
+}
+
+.image-container img,
+.image-container video {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-.image-container img {
+.image-container .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .image-container-1-1 {
@@ -556,4 +569,32 @@ h1.text-center {
     .debate-card h3, .debate-card h6, .debate-card p {
         font-size: 14px;
     }
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove padding below the images */
+}
+
+.image-container img,
+.image-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
