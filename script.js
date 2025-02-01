@@ -146,8 +146,8 @@ var studentGrowthChart = new Chart(ctx2, {
             {
                 label: 'Exceeded Expectation',
                 data: [61], // Updated data for Exceeded Expectation Students in percentage
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(0, 235, 0, 0.2)',
+              borderColor: 'rgba(0, 235, 0, 1)',
                 borderWidth: 1,
                 barPercentage: 0.25 // Reduce bar width
             }
