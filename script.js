@@ -204,6 +204,106 @@ var studentGrowthChart = new Chart(ctx2, {
     plugins: [ChartDataLabels]
 });
 
+// Chart.js code for Math
+var ctxMath = document.getElementById('myChartMath').getContext('2d');
+var myChartMath = new Chart(ctxMath, {
+    type: 'bar',
+    data: {
+        labels: [''],
+        datasets: [
+            {
+                label: 'N/A',
+                data: [0],
+                backgroundColor: 'rgba(100, 100, 100, 0.2)',
+                borderColor: 'rgba(100, 100, 100, 1)',
+                borderWidth: 1,
+                barPercentage: 0.25
+            },
+            {
+                label: 'Learning Loss',
+                data: [6],
+                backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                borderColor: 'rgba(255, 0, 0, 1)',
+                borderWidth: 1,
+                barPercentage: 0.25
+            },
+            {
+                label: 'Stagnant',
+                data: [13],
+                backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                borderColor: 'rgba(255, 159, 64, 1)',
+                borderWidth: 1,
+                barPercentage: 0.25
+            },
+            {
+                label: 'Expected Growth',
+                data: [35],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                barPercentage: 0.25
+            },
+            {
+                label: 'Exceeded Expectation',
+                data: [45],
+                backgroundColor: 'rgba(0, 235, 0, 0.2)',
+                borderColor: 'rgba(0, 235, 0, 1)',
+                borderWidth: 1,
+                barPercentage: 0.25
+            }
+        ]
+    },
+    options: {
+        plugins: {
+            datalabels: {
+                anchor: 'center',
+                align: 'center',
+                formatter: function(value) {
+                    return value > 0 ? value.toFixed(0) + '%' : '';
+                }
+            },
+            legend: {
+                position: 'bottom'
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        const datasetLabel = tooltipItem.dataset.label || '';
+                        const value = tooltipItem.raw;
+                        const studentCount = Math.round(value * 31 / 100);
+                        return `${datasetLabel}: ${studentCount} students`;
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                title: {
+                    display: true,
+                    text: '% of Students'
+                },
+                min: 0,
+                max: 100,
+                ticks: {
+                    stepSize: 10
+                },
+                stacked: true
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Types'
+                },
+                grid: {
+                    display: false
+                },
+                stacked: true
+            }
+        }
+    },
+    plugins: [ChartDataLabels]
+});
+
 // Function to check if an element is in viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
