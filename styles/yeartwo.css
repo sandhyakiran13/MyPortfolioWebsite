@@ -255,17 +255,17 @@ body {
 @media (max-width: 768px) {
     .parallax-title {
         font-size: 2rem;
-        white-space: nowrap; /* Allow text to wrap */
+        white-space: normal; /* Allow text to wrap */
     }
 
     .parallax-subtitle {
         font-size: 1.5rem;
-        white-space: nowrap; /* Allow text to wrap */
+        white-space: normal; /* Allow text to wrap */
     }
 
     .parallax-box {
         padding: 10px; /* Reduce padding inside the box */
-        white-space: nowrap; /* Allow text to wrap */
+        white-space: normal; /* Allow text to wrap */
     }
 
     .card {
@@ -302,5 +302,25 @@ body {
     .graph-container {
         max-width: 100%;
         margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .volunteers-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .volunteers-row div {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .volunteers-row h3 {
+        font-size: 16px;
+    }
+
+    .banner {
+        font-size: 16px;
     }
 }
