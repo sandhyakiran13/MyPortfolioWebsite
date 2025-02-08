@@ -3,11 +3,6 @@ html {
 }
 
 :root{
-    --lavender-lighest: #F5EFFF;
-    --lavender-light: #E5D9F2;
-    --lavender-medium: #CDC1FF;
-    --lavender-dark: #A294F9;
-    --lavender-darkest: #43123e;
 
     --text-light: #FFFFFF;
     --text-dark: #ffffff;
@@ -15,7 +10,7 @@ html {
     --primary-green: #191825;
     --primary-yellow: #191825;
     --primary-orange: #E384FF;
-    --primary-pink: #FFA3FD;
+    --primary-pink: #43123e;
 }
 
 .card {
